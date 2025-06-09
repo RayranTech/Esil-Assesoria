@@ -139,6 +139,77 @@
         justify-content: center;
       }
     }
+
+    /* Responsivo para celulares */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 20px;
+  }
+
+  nav {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .hero-text {
+    margin: 0;
+    max-width: 100%;
+
+    & .text {
+      text-align: center;
+    }
+  }
+
+  .hero img {
+    margin: 20px auto;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .section img {
+    margin: 20px auto;
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+    object-fit: contain;
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+  }
+}
     
     .testimonials {
       background-color: #004a99;
@@ -151,7 +222,9 @@
       display: flex;
       gap: 2rem;
 
-      height: 250px;
+      height: auto; /* Antes estava height: 250px; */
+      flex-wrap: wrap; /* Para garantir que as imagens "quebrem" a linha no mobile */
+      justify-content: center;
     }
     .testimonials h2 {
       margin-bottom: 40px;
